@@ -1,3 +1,5 @@
+// -> ---------- BEGIN ANIMATE ON SCROLL --------- -< //
+
 const container = document.querySelector('.container')
 const sections = gsap.utils.toArray('.container section')
 const texts = gsap.utils.toArray('.anim')
@@ -16,9 +18,7 @@ let scrollTween = gsap.to(sections, {
   },
 })
 
-console.log(1 / (sections.length - 1))
-
-// whizz around the sections
+// -> animate sections
 sections.forEach((section) => {
   // grab the scoped text
   let text = section.querySelectorAll('.anim')
@@ -42,3 +42,4 @@ sections.forEach((section) => {
     },
   })
 })
+//-- END ANIMATE ON SCROLL -- -<
