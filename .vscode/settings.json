@@ -1,0 +1,16 @@
+{
+  "workbench.colorCustomizations": {
+    "bookmarks.lineBorder": "#157ef2",
+    "tab.activeBackground": "#000000",
+    "tab.inactiveBackground": "#191919",
+    "tab.activeForeground": "#fafafa",
+    "tab.inactiveForeground": "#fafafa",
+    "tab.border": "#191919",
+    "tab.activeBorder": "#191919",
+    "panelTitle.activeBorder": "#ff0000",
+    "panel.background": "#191919",
+    "activityBar.background": "#292F2A",
+    "titleBar.activeBackground": "#3A423B",
+    "titleBar.activeForeground": "#FBFBFB"
+  }
+}
