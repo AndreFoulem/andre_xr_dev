@@ -110,12 +110,6 @@ section {
   height: 100vh;
 }
 
-.second {
-  width: 100%;
-  height: 100vh;
-  background-color: lightgreen;
-}
-
 .sec1 {
   background-image: linear-gradient(135deg, #43cbff 10%, #9708cc 100%);
 }
