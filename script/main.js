@@ -45,16 +45,24 @@ sections.forEach((section) => {
 })
 //-- END ANIMATE ON SCROLL -- -<
 
-const sectionOne = document.querySelector('.sec1')
+//- > Observer saved entry
+const sectionOne = document.querySelector('#hero')
 
 const options = {
-  root: 0,
+  root: null,
   threshold: 0,
-  rootMargin: '-50px',
+  rootMargin: '0px',
 }
+let nullifyFirstEntry = false
+
 const observer = new IntersectionObserver(function (entries, observer) {
   entries.forEach((entry) => {
-    entry.target.classList.toggle('red')
+    if (nullifyFirstEntry === true) {
+      entry.target.classList.toggle('red')
+      console.log('entry')
+    } else {
+      nullifyFirstEntry = true
+    }
   })
 }, options)
 
