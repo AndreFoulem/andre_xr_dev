@@ -12,7 +12,7 @@ let scrollTween = gsap.to(sections, {
     trigger: '.container',
     pin: true,
     scrub: 1,
-    end: '+=3500',
+    end: '+=3000',
     // snap: 1 / (sections.length - 1),
     // markers: false,
   },
@@ -26,13 +26,14 @@ sections.forEach((section) => {
   // bump out if there's no items to animate
   if (text.length === 0) return
 
-  // do a little stagger
+  // stagger
   gsap.from(text, {
-    y: -130,
+    y: 130,
     opacity: 0,
-    duration: 4,
-    ease: 'elastic',
-    stagger: 0.5,
+    delay: 0.5,
+    duration: 2,
+    ease: 'easein',
+    stagger: 0.1,
     scrollTrigger: {
       trigger: section,
       containerAnimation: scrollTween,
@@ -43,3 +44,18 @@ sections.forEach((section) => {
   })
 })
 //-- END ANIMATE ON SCROLL -- -<
+
+const sectionOne = document.querySelector('.sec1')
+
+const options = {
+  root: 0,
+  threshold: 0,
+  rootMargin: '-50px',
+}
+const observer = new IntersectionObserver(function (entries, observer) {
+  entries.forEach((entry) => {
+    entry.target.classList.toggle('red')
+  })
+}, options)
+
+observer.observe(sectionOne)

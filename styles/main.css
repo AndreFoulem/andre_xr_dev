@@ -45,7 +45,7 @@ li {
 
 /* >-- HERO --< */
 
-.hero {
+#hero {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,4 +116,11 @@ section {
 }
 .sec3 {
   background-image: linear-gradient(135deg, #f761a1 10%, #8c1bab 100%);
+}
+
+.red {
+  color: red;
+}
+.andre {
+  opacity: 100;
 }
